@@ -1,0 +1,29 @@
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset
+*.csv
+*.parquet
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# VS Code
+.vscode/
+
+# Model
+*.pkl
+*.joblib
+*.h5
+
+# Logs
+*.log
+
+# Dataset
+data/
