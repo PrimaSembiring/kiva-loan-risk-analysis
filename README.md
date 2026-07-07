@@ -43,7 +43,7 @@ project-root/
 │   └── external/           # External supporting data (if required)
 │
 ├── notebooks/ 
-│   ├── 01_data_understanding_eda.ipynb
+│   ├── 01_data_understanding.ipynb
 │   ├── 02_data_preprocessing_feature_engineering.ipynb
 │   ├── 03_model_development.ipynb
 │   ├── 04_model_evaluation_interpretation.ipynb

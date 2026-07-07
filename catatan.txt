@@ -1,0 +1,80 @@
+Kiva (platform perantara) itu perusahaan crowdfunding atau perusahaan yang meminjamkan uang kepada peminjam lewat social lending
+
+Kiva adalah platform perantara pinjaman mikro yang menghubungkan peminjam dengan pemberi pinjaman dari masyarakat melalui social lending.
+----------------------------------------------------------------------------------------------------------
+1. Fokusnya ke Memprediksi apakah sebuah pinjaman akan terfunding dalam waktu cepat (≤ 14 hari) atau lambat/tidak terfunding — untuk membantu Kiva memprioritaskan promosi dan alokasi sumber daya platform, jadi harus berhati hati dengan data funded_amount karena ini target/hasil
+
+
+
+----------------------------------------------------------------------------------------------------------
+kiva-project/
+│
+├── data/
+│   ├── raw/
+│   ├── interim/
+│   └── processed/
+│
+├── notebooks/
+│   ├── 01_business_understanding_eda.ipynb
+│   ├── 02_preprocessing_feature_engineering.ipynb
+│   ├── 03_model_development.ipynb
+│   └── 04_business_recommendation.ipynb
+│
+├── src/
+│   ├── config.py
+│   ├── preprocessing.py
+│   ├── feature_engineering.py
+│   ├── modeling.py
+│   └── utils.py
+│
+├── models/
+├── reports/
+├── requirements.txt
+├── README.md
+└── .gitignore
+
+----- DATASET -------
+
+-- Identitas Loan --
+id → ID unik untuk setiap pinjaman.
+funded_amount → jumlah dana yang berhasil terkumpul dari lender (Pemberi pinjaman).
+loan_amount → jumlah pinjaman yang diajukan borrower(Peminjam).
+
+-- Informasi Bisnis Borrower --
+activity → jenis usaha spesifik borrower (misalnya farming, tailoring, grocery).
+sector → kategori utama usaha borrower (misalnya agriculture, retail, food).
+use → deskripsi tujuan penggunaan dana pinjaman.
+
+-- Informasi Lokasi --
+country_code → kode negara borrower.
+country → nama negara borrower.
+region → wilayah/kota borrower di dalam negara tersebut.
+
+-- Informasi Mata Uang -- 
+currency → mata uang yang digunakan dalam pinjaman.
+
+-- Informasi Partner -- 
+partner_id → ID lembaga partner lokal yang menyalurkan pinjaman melalui Kiva.
+
+-- Informasi Waktu / Timeline --
+posted_time → waktu pinjaman dipublikasikan di platform Kiva.
+disbursed_time → waktu dana pinjaman dicairkan ke borrower.
+funded_time → waktu pinjaman berhasil mencapai pendanaan penuh.
+date → tanggal pencatatan loan.
+
+-- Ketentuan Pinjaman --
+term_in_months → durasi/tenor pinjaman dalam bulan.
+repayment_interval → pola pembayaran cicilan pinjaman (bulanan, tidak teratur, atau sekaligus).
+
+-- Informasi Pendanaan --
+lender_count → jumlah lender yang ikut mendanai satu pinjaman.
+
+-- Informasi Demografi --
+borrower_genders → gender borrower yang menerima pinjaman.
+
+-- Metadata Tambahan --
+tags → label/tag tambahan yang diberikan pada loan tertentu
+
+
+
+
